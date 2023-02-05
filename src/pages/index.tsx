@@ -148,7 +148,7 @@ export default function Home() {
         <div className={`flex flex-col justify-center space-y-20 ${introOpacity ? "opacity-100" : "opacity-0"} transition-opacity ease-in duration-700 mx-auto px-10 lg:w-1/3`}>
 
           <div className='flex justify-center'>
-            <Image className='border-black' src="/animation.gif" width={1000} height={1000} alt="samsara logo" />
+            <Image className='border-black' src="/animation.gif" width={500} height={500} alt="samsara logo" />
           </div>
 
           {
