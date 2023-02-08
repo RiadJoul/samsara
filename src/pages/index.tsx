@@ -2,7 +2,7 @@ import Button from '@/components/Button';
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-
+import Typical from 'react-typical'
 import { firebaseConfig } from '@/firebaseConfig';
 
 import { initializeApp } from "firebase/app";
@@ -148,7 +148,7 @@ export default function Home() {
         <div className={`flex flex-col justify-center space-y-20 ${introOpacity ? "opacity-100" : "opacity-0"} transition-opacity ease-in duration-700 mx-auto px-10 lg:w-1/3`}>
 
           <div className='flex justify-center'>
-            <Image className='border-black' src="/animation.gif" width={500} height={500} alt="samsara logo" />
+            <Image className={`border-black ${step == 3 && "pb-12"}`} src="/animation.gif" width={500} height={500} alt="samsara logo" />
           </div>
 
           {
@@ -185,7 +185,7 @@ export default function Home() {
                     className="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-transform"
                   ></span>
                 </h1>
-              }<p className='text-black font-semibold text-base text-center lg:text-xl '>While I have access to knowledge from thousands of years of understanding relationships, I'd like to get to know you better. May I know your age?
+              }<p className='text-black font-semibold text-base text-center lg:text-xl'>While I have access to knowledge from thousands of years of understanding relationships, I'd like to get to know you better. May I know your age?
               </p>
 
               <div className='space-y-5 '>
@@ -242,7 +242,9 @@ export default function Home() {
                   className="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-transform"
                 ></span>
               </h1>
-              <p className='text-white font-semibold text-base text-center lg:text-xl '>While I have access to knowledge from thousands of years of understanding relationships, I'd like to get to know you better. May I know your age?
+
+
+              <p className='text-white font-semibold text-base text-center lg:text-xl '>While I have access to knowledge from thousands of years of understanding relationships, I'd like to get to know you better. <span className='animate-text bg-gradient-to-r from-primary via-primary to-primary-focus bg-clip-text text-transparent'>May I know your age?</span> 
               </p>
               <div className='space-y-5'>
                 <label
@@ -273,7 +275,7 @@ export default function Home() {
           {/* email */}
           {
             step == 3 && <div className='space-y-5'>
-              <p className='text-white font-semibold text-base text-center lg:text-xl  animate-floating'>With my personalized and curated approach, finding true connection has never been easier
+              <p className='text-white font-semibold text-base text-center lg:text-xl'>With my personalized and curated approach, finding true connection has never been easier.<span className='animate-text bg-gradient-to-r from-primary via-primary to-primary-focus bg-clip-text text-transparent'> May I have your email to get started?</span>
 
               </p>
               <div className='space-y-5'>
@@ -319,7 +321,7 @@ export default function Home() {
                 <p className='font-bold text-lg text-center lg:text-xl animate-text bg-gradient-to-r from-primary via-gray-200 to-primary-focus bg-clip-text text-transparent mb-5'>Congratulations!
                 </p>
 
-                <p className='font-semibold text-base text-center lg:text-xl bg-primary-focus bg-clip-text text-transparent'>Congratulations! I received your request and can't wait to help you find lasting connection. I'll be in touch soon to get started. In the meantime, feel free to learn about my unique matchmaking system.</p>
+                <p className='font-semibold text-base text-center lg:text-xl bg-primary-focus bg-clip-text text-transparent'>I can't wait to help you find lasting connection. I'll be in touch soon to get started. In the meantime, feel free to learn about my unique matchmaking system.</p>
 
                 <a href="https://meetsamsara.com" className='flex justify-center' target="_blank" rel="noreferrer"><Button text='Go to website' onClick={() => { }} /></a>
 
